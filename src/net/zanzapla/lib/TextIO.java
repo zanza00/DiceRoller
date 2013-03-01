@@ -1,4 +1,4 @@
-package lib;
+package net.zanzapla.lib;
 
 
 

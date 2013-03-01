@@ -1,4 +1,4 @@
-package core;
+package net.zanzapla.core;
 
 import java.util.Random;
 
@@ -8,6 +8,8 @@ import java.util.Random;
  *
  */
 public class dice {
+	
+	// the standard/default dice has 6 faces
 	private int dieFaces = 6;
 	private int numberOfRolls = 0;
 	Random randGen = new Random();

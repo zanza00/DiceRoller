@@ -1,6 +1,6 @@
-package core;
+package net.zanzapla.core;
 
-import lib.TextIO;
+import net.zanzapla.lib.TextIO;
 
 public class MainActivity {
 	public static void main(String[] args) {
