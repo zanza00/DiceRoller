@@ -2,12 +2,12 @@ package net.zanzapla.core;
 
 import net.zanzapla.lib.TextIO;
 
-public class MainActivity {
+public class DiceRoller {
 	public static void main(String[] args) {
-		dice myFirstDice = new dice();
+		Dice myFirstDice = new Dice();
 		int numberOfRolls = 2;
 		
-		System.out.println("inserisci quanti tiri vuoi fare");
+		System.out.println("how many rolls you want to do");
 		int tiri = TextIO.getInt();
 
 		while (tiri > 0) {

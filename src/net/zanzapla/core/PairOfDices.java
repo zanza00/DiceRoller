@@ -1,11 +1,14 @@
 package net.zanzapla.core;
 
 public class PairOfDices {
-	dice dice1 = new dice();
-	dice dice2 = new dice();
+	private Dice dice1 = new Dice();
+	private Dice dice2 = new Dice();
 
-	public void roll() {
-		dice1.Roll();
-		dice2.Roll();
+	public void rolls() {
+		dice1.roll();
+		dice2.roll();
+	}
+	public void setFirstDiceFaces(int n){
+		dice1.setDieFaces(n);
 	}
 }
