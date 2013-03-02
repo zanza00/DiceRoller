@@ -9,9 +9,10 @@ import java.util.Random;
  */
 public class Dice {
 
-	private int dieFaces = 6;
-	private int numberOfRolls = 0;
-	Random randGen = new Random();
+	private int dieFaces = 6; // number of faces
+	private int numberOfRolls = 0; //number of rolls
+	Random randGen = new Random(); //random 
+	private int dieValue; //the current value of the dice 
 
 	/**
 	 * 
@@ -29,14 +30,27 @@ public class Dice {
 	public void setDieFaces(int n) {
 		dieFaces = n;
 	}
+	/**
+	 * set to 6, default value
+	 */
+	public void setDieFaces(){
+		dieFaces = 6;
+	}
 
 	/**
 	 * 
-	 * @return a int of the roll
+	 * Perform a roll with the dice, use getDiceValue() to know the result
 	 */
-	public int roll() {
+	public void roll() {
 		numberOfRolls++;
-		return randGen.nextInt(dieFaces) + 1;
+		dieValue = randGen.nextInt(dieFaces) + 1;
+	}
+	/**
+	 * 
+	 * @return the last result of the roll()
+	 */
+	public int getValue() {
+		return dieValue;
 	}
 
 	/**
@@ -50,17 +64,16 @@ public class Dice {
 	/**
 	 * a quick way to do multiple rolls
 	 * 
-	 * @param number
-	 *            of rolls
+	 * @param number of rolls
 	 * @return the sum of the rolls
 	 */
 
 	public int multipleRolls(int n) {
 		int result = 0;
 		for (int i = 0; i < n; i++) {
-			result += roll();
+			roll();
+			result += getValue();
 		}
 		return result;
 	}
-
 }
