@@ -5,7 +5,7 @@ public class BagOfDices {
 	private Dice[] bag;
 
 	/**
-	 * create a new bag of dices, all with
+	 * create a new bag of dices, all with 6 faces
 	 * 
 	 * @param numberofDice
 	 *            the number of dices in the bag
@@ -56,9 +56,8 @@ public class BagOfDices {
 	 * 
 	 * @return an array of all the results of the various roll()
 	 */
-	@SuppressWarnings("null")
 	public int[] getValue() {
-		int[] result = null;
+		int[] result = new int[bag.length];
 		for (int i = 0; i < bag.length; i++) {
 			result[i] = bag[i].getValue();
 		}
