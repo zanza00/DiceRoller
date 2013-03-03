@@ -1,7 +1,7 @@
 /**
  * testing class named Test.java, how original :D
  */
-package net.zanzapla.core;
+package net.zanzapla.diceroller.core;
 
 //import net.zanzapla.lib.TextIO;
 

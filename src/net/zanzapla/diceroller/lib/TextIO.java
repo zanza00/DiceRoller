@@ -1,4 +1,4 @@
-package net.zanzapla.lib;
+package net.zanzapla.diceroller.lib;
 
 
 

@@ -1,4 +1,4 @@
-package net.zanzapla.core;
+package net.zanzapla.diceroller.core;
 
 public class Operators {
 	
@@ -32,6 +32,7 @@ public class Operators {
 			return "dice 2";
 		}		
 	}
+	
 	/**
 	 * 
 	 * @param dice1

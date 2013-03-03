@@ -1,4 +1,4 @@
-package net.zanzapla.core;
+package net.zanzapla.diceroller.core;
 
 import java.util.Random;
 
@@ -9,10 +9,29 @@ import java.util.Random;
  */
 public class Dice {
 
-	private int dieFaces = 6; // number of faces
-	private int numberOfRolls = 0; //number of rolls
-	Random randGen = new Random(); //random 
-	private int dieValue; //the current value of the dice 
+	private int dieFaces; // number of faces
+	private int dieValue; // the current value of the dice
+
+	private int numberOfRolls = 0; // number of rolls
+	Random randGen = new Random(); // random
+
+	/**
+	 * set the faces to 6, default, and roll the dice when it's created
+	 */
+	public Dice() {
+		this.setDieFaces();
+		this.roll();
+	}
+
+	/**
+	 * set the faces of the dice and roll
+	 * 
+	 * @param numberOfFaces
+	 *            the number of faces of the dice
+	 */
+	public Dice(int numberOfFaces) {
+		this.setDieFaces(numberOfFaces);
+	}
 
 	/**
 	 * 
@@ -27,14 +46,15 @@ public class Dice {
 	 * 
 	 * @param
 	 */
-	public void setDieFaces(int n) {
-		dieFaces = n;
+	public void setDieFaces(int numberOfFaces) {
+		dieFaces = numberOfFaces;
 	}
+
 	/**
 	 * set to 6, default value
 	 */
-	public void setDieFaces(){
-		dieFaces = 6;
+	public void setDieFaces() {
+		setDieFaces(6);
 	}
 
 	/**
@@ -45,6 +65,7 @@ public class Dice {
 		numberOfRolls++;
 		dieValue = randGen.nextInt(dieFaces) + 1;
 	}
+
 	/**
 	 * 
 	 * @return the last result of the roll()
@@ -64,7 +85,8 @@ public class Dice {
 	/**
 	 * a quick way to do multiple rolls
 	 * 
-	 * @param number of rolls
+	 * @param number
+	 *            of rolls
 	 * @return the sum of the rolls
 	 */
 
@@ -72,7 +94,7 @@ public class Dice {
 		int result = 0;
 		for (int i = 0; i < n; i++) {
 			roll();
-			result += getValue();
+			result += this.getValue();
 		}
 		return result;
 	}
