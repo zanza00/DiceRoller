@@ -40,8 +40,14 @@ public class Test {
 		bagOf3.rolls();
 		int[] results = bagOf3.getValue();
 		for (int i = 0; i < results.length; i++) {
-			System.out.print(results[i] + ", ");
+			if (i == results.length - 1) {
+				System.out.print(results[i]);
+			} else {
+				System.out.print(results[i] + ", ");
+			}
 		}
+		System.out.println();
+		System.out.println(bagOf3.getBagTotalValue());
 	}
 
 }

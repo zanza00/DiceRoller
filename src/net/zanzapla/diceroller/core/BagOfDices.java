@@ -2,7 +2,8 @@ package net.zanzapla.diceroller.core;
 
 public class BagOfDices {
 
-	private Dice[] bag;
+	private Dice[] bag; //the bag of dices
+	private int bagModifier = 0;
 
 	/**
 	 * create a new bag of dices, all with 6 faces
@@ -41,6 +42,31 @@ public class BagOfDices {
 	 */
 	public void changeDiceFaces(int dicePosition, int numOfDiceFaces) {
 		bag[dicePosition - 1].setDieFaces(numOfDiceFaces);
+	}
+
+	/**
+	 * @return the bagModifier
+	 */
+	public int getBagModifier() {
+		return bagModifier;
+	}
+
+	/**
+	 * @param bagModifier the bagModifier to set
+	 */
+	public void setBagModifier(int bagModifier) {
+		this.bagModifier = bagModifier;
+	}
+
+	/**
+	 * @return the bagTotalValue
+	 */
+	public int getBagTotalValue() {
+		int result = 0;
+		for (int i = 0; i < bag.length; i++) {
+			result += bag[i].getValue();
+		}
+		return result + bagModifier;
 	}
 
 	/**

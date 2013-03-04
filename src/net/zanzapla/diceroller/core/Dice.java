@@ -11,6 +11,8 @@ public class Dice {
 
 	private int dieFaces; // number of faces
 	private int dieValue; // the current value of the dice
+	
+	private int rollModifier = 0; // the modifier of the roll
 
 	private int numberOfRolls = 0; // number of rolls
 	Random randGen = new Random(); // random
@@ -63,7 +65,28 @@ public class Dice {
 	 */
 	public void roll() {
 		numberOfRolls++;
-		dieValue = randGen.nextInt(dieFaces) + 1;
+		dieValue = randGen.nextInt(dieFaces) + 1 + rollModifier;
+	}
+	
+	/**
+	 * @return the rollModifier
+	 */
+	public int getRollModifier() {
+		return rollModifier;
+	}
+
+	/**
+	 * @param rollModifier the rollModifier to set
+	 */
+	public void setRollModifier(int rollModifier) {
+		this.rollModifier = rollModifier;
+	}
+	
+	/**
+	 * set the rollModifier to 0 (no modifier to the roll)
+	 */
+	public void setRollModifier() {
+		this.rollModifier = 0;
 	}
 
 	/**
