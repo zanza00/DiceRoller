@@ -96,6 +96,9 @@ public class Dice {
 	public int getValue() {
 		return dieValue;
 	}
+	public String getStrValue() {
+		return Integer.toString(this.dieValue);
+	}
 
 	/**
 	 * 
