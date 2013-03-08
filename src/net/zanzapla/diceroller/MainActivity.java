@@ -14,6 +14,7 @@ import net.zanzapla.diceroller.core.*;
 public class MainActivity extends Activity {
 	
 public final static String EXTRA_MESSAGE = "net.zanzapla.diceroller.MESSAGE";	
+public static Dice dice;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +31,11 @@ public final static String EXTRA_MESSAGE = "net.zanzapla.diceroller.MESSAGE";
 	}
 	public void onClickRoll(View btn){
 		Intent intent = new Intent(this, DisplayRollActivity.class);
-		Dice dice = new Dice();
+		dice = new Dice();
+		dice.setDieFaces();
 		dice.roll();
 		String result = dice.getStrValue();		
 		intent.putExtra(EXTRA_MESSAGE, result);
 		startActivity(intent);
-		
 	}
-	
-	
-
 }

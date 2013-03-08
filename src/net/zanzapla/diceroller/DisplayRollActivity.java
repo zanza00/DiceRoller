@@ -20,13 +20,13 @@ public class DisplayRollActivity extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
-		Intent intent =getIntent();
+		Intent intent = getIntent();
 		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 		
 		//create the text view
 		TextView textView = new TextView(this);
 		textView.setTextSize(40);
-		textView.setText(message);
+		textView.setText("Hai tirato un dado da "+ net.zanzapla.diceroller.MainActivity.dice.getDieFaces() + " e fatto " + message);
 		
 		//set the text view as the activity layout
 		setContentView(textView);

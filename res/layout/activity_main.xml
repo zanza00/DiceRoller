@@ -24,18 +24,8 @@
         android:layout_below="@+id/textView1"
         android:layout_marginLeft="53dp"
         android:layout_marginTop="27dp"
-        android:text="@string/Roll" 
         android:onClick="onClickRoll"
-        android:tag="6"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="61dp"
-        android:text="@string/result"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:tag="6"
+        android:text="@string/Roll" />
 
 </RelativeLayout>
