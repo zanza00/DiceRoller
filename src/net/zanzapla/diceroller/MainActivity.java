@@ -38,4 +38,13 @@ public static Dice dice;
 		intent.putExtra(EXTRA_MESSAGE, result);
 		startActivity(intent);
 	}
+	public void onClickRoll100(View btn){
+		Intent intent = new Intent(this, DisplayRollActivity.class);
+		dice = new Dice();
+		dice.setDieFaces(100);
+		dice.roll();
+		String result = dice.getStrValue();		
+		intent.putExtra(EXTRA_MESSAGE, result);
+		startActivity(intent);
+	}
 }
