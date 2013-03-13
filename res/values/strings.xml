@@ -6,8 +6,11 @@
     <string name="roll_the_dice">Roll the dice!</string>
     <string name="Roll">Roll d6!</string>
     <string name="result">Result</string>
-    <string name="title_activity_display_roll">The Roll Result</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="Rolld20">Roll d20!</string>
+    <string name="Rolld10">Roll d10!</string>
     <string name="Rolld100">Roll d100!</string>
-
+    <string name="result_roll">Result</string>
+    <string name="empty">" "</string>
+    <string name="dice6">You have rolled a D6</string>
+    <string name="dice100">You have rolled a D100</string>
 </resources>

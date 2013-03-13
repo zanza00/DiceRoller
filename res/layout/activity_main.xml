@@ -17,7 +17,7 @@
         android:textSize="@dimen/FatAss" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/diceButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
@@ -28,13 +28,51 @@
         android:text="@string/Roll" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/diceButton100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBottom="@+id/diceButton6"
         android:layout_alignLeft="@+id/textView1"
         android:text="@string/Rolld100"
         android:onClick="onClickRoll100"
         />
+
+    <TextView
+        android:id="@+id/numberResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/diceButton100"
+        android:layout_below="@+id/resultTextView"
+        android:text="@string/empty"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/diceButton100"
+        android:layout_centerVertical="true"
+        android:text="@string/result_roll"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+
+    <Button
+        android:id="@+id/diceButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/diceButton6"
+        android:layout_below="@+id/diceButton6"
+        android:text="@string/Rolld10"
+        android:onClick="onClickRoll10"/>
+
+    <Button
+        android:id="@+id/diceButton20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/diceButton10"
+        android:layout_alignBottom="@+id/diceButton10"
+        android:layout_alignLeft="@+id/diceButton100"
+        android:onClick="onClickRoll20"
+        android:text="@string/Rolld20" />
 
 </RelativeLayout>

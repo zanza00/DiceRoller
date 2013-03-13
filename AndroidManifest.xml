@@ -25,7 +25,6 @@
         </activity>
         <activity
             android:name="net.zanzapla.diceroller.DisplayRollActivity"
-            android:label="@string/title_activity_display_roll"
             android:parentActivityName="net.zanzapla.diceroller.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
