@@ -19,7 +19,7 @@ private TextView resultText, resultValue;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		resultText = (TextView) findViewById(R.id.resultTextView);
+		resultText = (TextView) findViewById(R.id.textResultTextView);
 		resultValue = (TextView) findViewById(R.id.numberResultTextView);
 	}
 
@@ -49,7 +49,9 @@ private TextView resultText, resultValue;
 		break;
 
 		}
-		resultText.setText(result);
-		resultValue.setText(text);		
+		resultText.setText(text);
+		resultText.setWidth(90);
+		resultValue.setText(result);
+		resultValue.setTextSize(100);		
 	}
 }

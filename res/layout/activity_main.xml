@@ -38,25 +38,6 @@
         android:tag="100"
         />
 
-    <TextView
-        android:id="@+id/numberResultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/diceButton100"
-        android:layout_below="@+id/resultTextView"
-        android:text="@string/empty"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/diceButton100"
-        android:layout_centerVertical="true"
-        android:text="@string/result_roll"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-
     <Button
         android:id="@+id/diceButton10"
         android:layout_width="wrap_content"
@@ -78,5 +59,23 @@
         android:onClick="onClickRoll"
         android:text="@string/Rolld20"
         android:tag="20"/>
+
+    <TextView
+        android:id="@+id/textResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/diceButton10"
+        android:layout_centerVertical="true"
+        android:text="@string/result_roll"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/numberResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/diceButton100"
+        android:layout_below="@+id/textResultTextView"
+        android:text="@string/empty"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
