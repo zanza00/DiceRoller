@@ -4,13 +4,15 @@
     <string name="app_name">Dice Roller</string>
     <string name="action_settings">Settings</string>
     <string name="roll_the_dice">Roll the dice!</string>
-    <string name="Roll">Roll d6!</string>
     <string name="result">Result</string>
+	<string name="Rolld6">Roll d6!</string>
     <string name="Rolld20">Roll d20!</string>
     <string name="Rolld10">Roll d10!</string>
     <string name="Rolld100">Roll d100!</string>
     <string name="result_roll">Result</string>
     <string name="empty">" "</string>
-    <string name="dice6">You have rolled a D6</string>
-    <string name="dice100">You have rolled a D100</string>
+    <string name="dice_six">You have rolled a D6</string>
+    <string name="dice_ten">You have rolled a D10</string>
+    <string name="dice_twenty">You have rolled a D20</string>
+    <string name="dice_hundred">You have rolled a D100</string>
 </resources>

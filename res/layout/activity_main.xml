@@ -25,7 +25,7 @@
         android:layout_marginTop="38dp"
         android:onClick="onClickRoll"
         android:tag="6"
-        android:text="@string/Roll" />
+        android:text="@string/Rolld6" />
 
     <Button
         android:id="@+id/diceButton100"
@@ -34,7 +34,8 @@
         android:layout_alignBottom="@+id/diceButton6"
         android:layout_alignLeft="@+id/textView1"
         android:text="@string/Rolld100"
-        android:onClick="onClickRoll100"
+        android:onClick="onClickRoll"
+        android:tag="100"
         />
 
     <TextView
@@ -63,7 +64,9 @@
         android:layout_alignLeft="@+id/diceButton6"
         android:layout_below="@+id/diceButton6"
         android:text="@string/Rolld10"
-        android:onClick="onClickRoll10"/>
+        android:onClick="onClickRoll"
+        android:tag="10"
+        />
 
     <Button
         android:id="@+id/diceButton20"
@@ -72,7 +75,8 @@
         android:layout_alignBaseline="@+id/diceButton10"
         android:layout_alignBottom="@+id/diceButton10"
         android:layout_alignLeft="@+id/diceButton100"
-        android:onClick="onClickRoll20"
-        android:text="@string/Rolld20" />
+        android:onClick="onClickRoll"
+        android:text="@string/Rolld20"
+        android:tag="20"/>
 
 </RelativeLayout>
