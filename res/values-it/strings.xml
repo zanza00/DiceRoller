@@ -1,5 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="Rolld10">lol</string>
-
+    <string name="app_name">Tira Dadi</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="roll_the_dice">Tira il dado!</string>
+    <string name="result">Risultati</string>
+	<string name="Rolld6">Tira d6!</string>
+    <string name="Rolld20">Tira d20!</string>
+    <string name="Rolld10">Tira d10!</string>
+    <string name="Rolld100">Tora d100!</string>
+    <string name="result_roll">Risultato</string>
+    <string name="empty">" "</string>
+    <string name="dice_six">Hai tirato un D6</string>
+    <string name="dice_ten">Hai tirato un  D10</string>
+    <string name="dice_twenty">Hai tirato un  D20</string>
+    <string name="dice_hundred">Hai tirato un  D100</string>
 </resources>
