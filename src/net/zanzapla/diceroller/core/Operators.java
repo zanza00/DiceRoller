@@ -40,12 +40,9 @@ public class Operators {
 	 * @return true if are equals false if not
 	 */
 	public boolean equals(Dice dice1, Dice dice2){
-		if (dice1.getValue() == dice2.getValue()){
-			return true;
-		} else  {
-			return false;
-		}
+		return dice1.getValue() == dice2.getValue();
 	}
+
 	/**
 	 * 
 	 * @param dice

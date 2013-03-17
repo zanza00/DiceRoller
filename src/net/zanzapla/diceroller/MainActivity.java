@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
 public final static String EXTRA_MESSAGE = "net.zanzapla.diceroller.MESSAGE";	
 public static Dice dice = new Dice();
 private TextView resultText, resultValue;
+private String text;
+private String result;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +32,11 @@ private TextView resultText, resultValue;
 		return true;
 	}
 	public void onClickRoll(View btn){
-		int Qid = Integer.parseInt((String) btn.getTag());		
-		dice.setDieFaces(Qid);
+		int dieFaces = Integer.parseInt((String) btn.getTag());		
+		dice.setDieFaces(dieFaces);
 		dice.roll();
-		String result = dice.getStrValue();
-		String text;
-		switch (Qid) {
+		result = dice.getStrValue();
+		switch (dieFaces) {
 		case 6: text = getResources().getString(R.string.dice_six);
 		break;
 		case 10: text = getResources().getString(R.string.dice_ten);
@@ -49,9 +50,13 @@ private TextView resultText, resultValue;
 		break;
 
 		}
+		
+	}
+	
+	public void drawResults() {
 		resultText.setText(text);
 		resultText.setWidth(90);
 		resultValue.setText(result);
-		resultValue.setTextSize(100);		
+		resultValue.setTextSize(100);
 	}
 }
