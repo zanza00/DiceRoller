@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:name="net.zanzapla.diceroller.DisplayRollActivity"
             android:parentActivityName="net.zanzapla.diceroller.MainActivity" >
             <meta-data

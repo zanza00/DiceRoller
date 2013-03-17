@@ -50,6 +50,7 @@ private String result;
 		break;
 
 		}
+		drawResults();
 		
 	}
 	
