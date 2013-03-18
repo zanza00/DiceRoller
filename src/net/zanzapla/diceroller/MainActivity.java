@@ -2,7 +2,6 @@ package net.zanzapla.diceroller;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.res.Configuration;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -14,15 +13,10 @@ public class MainActivity extends Activity {
 public final static String EXTRA_MESSAGE = "net.zanzapla.diceroller.MESSAGE";	
 public static Dice dice = new Dice();
 private TextView resultText, resultValue;
-<<<<<<< HEAD
 private String text;
 private String result;
-static final String TEXT_STATUS = "0";
-static final String RESULT_STATUS = "0";
-=======
-private String text= "0";
-private String result="0";
->>>>>>> f617fc8fca932be56265c7f9fd6fa962fa281700
+static final String TEXT_STATUS = "HERp_DERp";
+static final String RESULT_STATUS = "HALP";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +24,6 @@ private String result="0";
 		setContentView(R.layout.activity_main);
 
 		SetupActivity();
-<<<<<<< HEAD
 		
 	    if (savedInstanceState != null) {
 	        // Restore value of members from saved state
@@ -44,36 +37,12 @@ private String result="0";
 	
 	
     private void SetupActivity() {
-=======
-		if (!text.equals("0")) {
-			drawResults();
-		}
-		
-	}
-	
-	
-    @Override
-
-    public void onConfigurationChanged(Configuration newConfig) {
-
-    	super.onConfigurationChanged(newConfig);
-    	setContentView(R.layout.activity_main);
-    	text = (String) resultText.getText();
-
-    	drawResults();
-
-    }
-
-
-	private void SetupActivity() {
->>>>>>> f617fc8fca932be56265c7f9fd6fa962fa281700
 		// TODO Auto-generated method stub
 		resultText = (TextView) findViewById(R.id.textResultTextView);
 		resultValue = (TextView) findViewById(R.id.numberResultTextView);
 		
 	}
 
-<<<<<<< HEAD
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the user's current game state
@@ -94,8 +63,6 @@ private String result="0";
 
     }*/
 
-=======
->>>>>>> f617fc8fca932be56265c7f9fd6fa962fa281700
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
