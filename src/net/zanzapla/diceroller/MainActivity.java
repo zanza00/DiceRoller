@@ -2,6 +2,7 @@ package net.zanzapla.diceroller;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -13,17 +14,42 @@ public class MainActivity extends Activity {
 public final static String EXTRA_MESSAGE = "net.zanzapla.diceroller.MESSAGE";	
 public static Dice dice = new Dice();
 private TextView resultText, resultValue;
-private String text;
-private String result;
+private String text= "0";
+private String result="0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		SetupActivity();
+		if (!text.equals("0")) {
+			drawResults();
+		}
 		
+	}
+	
+	
+    @Override
+
+    public void onConfigurationChanged(Configuration newConfig) {
+
+    	super.onConfigurationChanged(newConfig);
+    	setContentView(R.layout.activity_main);
+    	text = (String) resultText.getText();
+
+    	drawResults();
+
+    }
+
+
+	private void SetupActivity() {
+		// TODO Auto-generated method stub
 		resultText = (TextView) findViewById(R.id.textResultTextView);
 		resultValue = (TextView) findViewById(R.id.numberResultTextView);
+		
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
