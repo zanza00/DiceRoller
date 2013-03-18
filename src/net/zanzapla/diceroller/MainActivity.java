@@ -2,6 +2,7 @@ package net.zanzapla.diceroller;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -15,15 +16,54 @@ public static Dice dice = new Dice();
 private TextView resultText, resultValue;
 private String text;
 private String result;
+static final String TEXT_STATUS = "0";
+static final String RESULT_STATUS = "0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		SetupActivity();
 		
+	    if (savedInstanceState != null) {
+	        // Restore value of members from saved state
+	        text = savedInstanceState.getString(TEXT_STATUS);
+	        result = savedInstanceState.getString(RESULT_STATUS);
+	        drawResults();
+	    }
+		
+		
+	}
+	
+	
+    private void SetupActivity() {
+		// TODO Auto-generated method stub
 		resultText = (TextView) findViewById(R.id.textResultTextView);
 		resultValue = (TextView) findViewById(R.id.numberResultTextView);
+		
 	}
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString(TEXT_STATUS, text);
+        savedInstanceState.putString(RESULT_STATUS, result);
+        
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+/*	@Override
+    public void onConfigurationChanged(Configuration newConfig) {
+
+    	super.onConfigurationChanged(newConfig);
+    	setContentView(R.layout.activity_main);
+
+    	drawResults();
+
+    }*/
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
