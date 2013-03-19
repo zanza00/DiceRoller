@@ -78,4 +78,14 @@
         android:text="@string/empty"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/DiceBagSetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_toRightOf="@+id/numberResultTextView"
+        android:text="@string/dice_bag_button"
+        android:onClick="goToDiceBag" />
+
 </RelativeLayout>

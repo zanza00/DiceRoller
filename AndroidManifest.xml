@@ -24,8 +24,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:name="net.zanzapla.diceroller.DisplayRollActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:parentActivityName="net.zanzapla.diceroller.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.zanzapla.diceroller.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.zanzapla.diceroller.DiceBagManager"
+            android:label="@string/title_activity_dice_bag_manager"
             android:parentActivityName="net.zanzapla.diceroller.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

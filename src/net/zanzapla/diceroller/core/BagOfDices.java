@@ -33,6 +33,10 @@ public class BagOfDices {
 		}
 	}
 
+	public BagOfDices() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * 
 	 * @param dicePosition
