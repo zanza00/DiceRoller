@@ -22,7 +22,6 @@
     <string name="dice_bag_button">New Dice Bag</string>
     <string name="dice_bag_intro">Pick the dices of this bag</string>
     <string name="dice_bag_create">Create new Dice Bag</string>
-    
     <string name="action_settings">Settings</string>
 
 </resources>

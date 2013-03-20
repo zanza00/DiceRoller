@@ -35,6 +35,7 @@ public class BagOfDices {
 
 	public BagOfDices() {
 		// TODO Auto-generated constructor stub
+		bag = new Dice[0];
 	}
 
 	/**
@@ -92,5 +93,19 @@ public class BagOfDices {
 			result[i] = bag[i].getValue();
 		}
 		return result;
+	}
+
+	public void addDice(int dieFaces) {
+		// TODO Auto-generated method stub
+		Dice[] tmp = new Dice[bag.length +1];
+		for (int i = 0; i < bag.length; i++) {
+			tmp[i] = bag[i];
+		}
+		tmp[tmp.length].setDieFaces(dieFaces);
+		bag = tmp;
+	}
+	
+	public int numberOfDices(){
+		return bag.length+1;
 	}
 }

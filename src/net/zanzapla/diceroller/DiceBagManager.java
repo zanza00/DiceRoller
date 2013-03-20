@@ -6,12 +6,14 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
 
 public class DiceBagManager extends Activity {
 	public final static BagOfDices DICE_BAG = new BagOfDices();
+	private CheckBox d6Check, d10Check, d20Check, d100Check;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,22 @@ public class DiceBagManager extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	public void createDiceBag(View view){
-		
+		d6Check = (CheckBox) findViewById(R.id.d6Checker);
+		d10Check = (CheckBox) findViewById(R.id.d10Checker);
+		d20Check = (CheckBox) findViewById(R.id.d20Checker);
+		d100Check = (CheckBox) findViewById(R.id.d100Checker);
+		if (d6Check.isChecked()) {
+			DICE_BAG.addDice(6);
+		}
+		if (d10Check.isChecked()) {
+			DICE_BAG.addDice(10);
+		}
+		if (d20Check.isChecked()) {
+			DICE_BAG.addDice(20);
+		}
+		if (d100Check.isChecked()) {
+			DICE_BAG.addDice(100);
+		}
 	}
 
 }
