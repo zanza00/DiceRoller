@@ -1,5 +1,6 @@
 package net.zanzapla.diceroller;
 
+import net.zanzapla.diceroller.core.BagOfDices;
 import net.zanzapla.diceroller.core.Dice;
 import android.app.Activity;
 import android.content.Intent;
@@ -80,6 +81,11 @@ static final String RESULT_STATUS = "HALP";
 		}
 		drawResults();
 		
+	}
+	public void rollDiceBag() {
+		BagOfDices DICE_BAG = new BagOfDices();
+		DICE_BAG.rolls();
+		result = DICE_BAG.getStrBagTotalValue();
 	}
 	
 	public void drawResults() {

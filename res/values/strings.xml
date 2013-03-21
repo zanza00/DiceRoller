@@ -19,9 +19,10 @@
     <string name="rolled_dice_twenty">You have rolled a D20</string>
     <string name="rolled_dice_hundred">You have rolled a D100</string>
     <string name="title_activity_dice_bag_manager">DiceBag Manager</string>
-    <string name="dice_bag_button">New Dice Bag</string>
+    <string name="dice_bag_button">Dice Bag</string>
     <string name="dice_bag_intro">Pick the dices of this bag</string>
     <string name="dice_bag_create">Create new Dice Bag</string>
+    <string name="dice_bag_roll">Roll Dice Bag</string>
     <string name="action_settings">Settings</string>
 
 </resources>

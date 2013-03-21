@@ -61,15 +61,6 @@
         android:tag="20"/>
 
     <TextView
-        android:id="@+id/textResultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/diceButton10"
-        android:layout_centerVertical="true"
-        android:text="@string/result_roll"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/numberResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,14 +69,33 @@
         android:text="@string/empty"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/textResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DiceBagSetter"
+        android:layout_below="@+id/DiceBagSetter"
+        android:layout_marginTop="21dp"
+        android:text="@string/result_roll"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
         android:id="@+id/DiceBagSetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="22dp"
-        android:layout_toRightOf="@+id/numberResultTextView"
-        android:text="@string/dice_bag_button"
-        android:onClick="goToDiceBag" />
+        android:layout_alignLeft="@+id/diceButton20"
+        android:layout_below="@+id/diceButton10"
+        android:onClick="goToDiceBag"
+        android:text="@string/dice_bag_button" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DiceBagSetter"
+        android:layout_alignBottom="@+id/DiceBagSetter"
+        android:layout_toRightOf="@+id/diceButton100"
+        android:text="@string/dice_bag_roll" 
+        android:onClick="rollDiceBag"/>
 
 </RelativeLayout>

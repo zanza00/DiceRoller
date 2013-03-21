@@ -73,6 +73,10 @@ public class BagOfDices {
 		}
 		return result + bagModifier;
 	}
+	
+	public String getStrBagTotalValue() {
+		return bag.toString();
+	}
 
 	/**
 	 * roll all the dice in the bag
